@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Maior , menor e média</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Maior, menor média</h1>
+
+
+
+            <label for="txt1QuantidadeNumeros">Digite a quantidade de números:</label><input type="number" id="txtQuantidadeDeNumeros">
+
+            <label for="txt2Numero">Digite o números:</label><input type="number" id="txtNumero">
+
+
+            <button onclick="botao_click()">armazenar</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        var numeros = []; 
+
+        function botao_click() {
+
+            //você irá programar aqui!
+
+            var txtQuantidadeDeNumeroTexto = document.getElementById("txtQuantidadeDeNumeros");
+
+            var txtNumero = document.getElementById("txtNumero");
+
+            var quantidade = parseInt(quantidadeDeNumeroTexto).value;
+
+            if (numeros.length < quantidade) {
+
+                var numeroTexto = parseInt(txtNumero.value);
+
+                numeros.push(numeroTexto);
+
+                txtNumero.value = " ";
+
+                txtNumero.focus();
+             
+            }
+            if (numeros.length == quantidade) {
+
+                var maiorNumero;
+                var menorNumero;
+                var media;
+
+                for (var i = 0; i < numeros.length; i++) {
+
+                    var numero = Numeros[i];
+
+                    if (numero > maiorNumero) {
+                        maiorNumero = numero;
+                            
+                    }
+
+                    if (numero < menorNumero) {
+                        menorNumero = numero;
+                    }
+                }
+                alert(" O maior numero é " + maiorNumero + "menor numero é" + menorNumero);
+            }
+        }
+
+    </script>
+
+</body>
+</html>

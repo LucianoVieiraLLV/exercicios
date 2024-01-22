@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Negativos</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Numeros negativos</h1>
+
+
+
+            <label for="txtQtDeNumeros">informe a quantidade de numeros:</label>
+
+            <input type="number" id="txtQtDeNumeros">
+
+            <label for="txtNumero">informe cada número:</label>
+
+            <input type="number" id="txtNumero">
+
+            <button onclick="botao_click()">Armazenar</button>
+
+        </div>
+    </div>
+
+    <script>
+        var numeros = [];
+        var numerosNegativos = [];
+
+        function botao_click() {
+
+            //você irá programar aqui!
+
+            var txtQtDeNumeros = document.getElementById("txtQtDeNumeros");
+            var txtNumero = document.getElementById("txtNumero");
+
+           
+            var qtDeNumeros = parseInt(txtQtDeNumeros.value);
+
+            if (numeros.length < qtDeNumeros) {
+
+                var numero = parseInt(txtNumero.value);
+
+                numeros.push(numero);
+
+                txtNumero.value = "";
+                txtNumero.focus();
+            }
+
+            if (numeros.length == qtDeNumeros) {
+
+                for (var i = 0; i < numeros.length; i++) {
+
+                    var numero = numeros[i];
+                    if (numero < 0) {
+                        numerosNegativos.push(numero);
+                    }
+
+                }
+
+                alert("Os números negativos são" + numerosNegativos.toString());
+
+                numeros = [];
+                numerosNegativos = [];
+                txtNumero.value = "";
+                txtQtDeNumeros = "";
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>

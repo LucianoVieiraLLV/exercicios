@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Operadora</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Operadora</h1>
+
+            <p>Digite abaixo a quantidades de minutos consumidos</p>
+
+            <label for="txt1">Minutos consumidos:</label><input type="number" id="txtMinutosConsumidos">
+
+            
+
+
+
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            //você irá programar aqui!
+
+            var minutosConsumidosTexto = document.getElementById("txtMinutosConsumidos").value;
+
+            var minutosConsumidos = parseFloat(minutosConsumidosTexto);
+
+            var planoMinutos = 100;
+
+            var valorPlano = 50;
+
+            var valorDoMinutoExcedente = 2;
+
+            var valorTotal;
+
+            if (minutosConsumidos > planoMinutos) {
+                var minutosExcedentes = minutosConsumidos - planoMinutos;
+
+                var valorExcedentes = minutosExcedentes * valorDoMinutoExcedente;
+
+                valorTotal = valorPlano * valorExcedentes;
+            }
+
+                else {
+                    valorTotal = valorPlano;
+                }
+
+                alert("O valor da sua fatura será de R$" + valorTotal);
+
+
+
+        }
+
+    </script>
+
+</body>
+</html>

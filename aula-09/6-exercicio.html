@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Título</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Troco</h1>
+
+            <p>Produto</p>
+
+            <label for="txt1">preço:</label><input type="number" id="preco1">.
+            <label for="txt2">quantidade:</label><input type="number" id="quantidade2">
+            <label for="txt2">valor:</label><input type="number" id="resultado3">
+            
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            //você irá programar aqui!
+
+            var caixaTexto1 = document.getElementById("preco1").value;
+
+            preco1 = parseFloat(caixaTexto1);
+
+            var caixaTexto2 = document.getElementById("quantidade2").value;
+
+            quantidade2 = parseFloat(caixaTexto2);
+
+			var caixaTexto3 = document.getElementById("resultado3").value;
+
+			resultado3 = parseFloat(caixaTexto3);
+
+
+            var valorTotal = preco1 * quantidade2;
+
+            var troco = resultado3 - valorTotal;
+
+            var mensagem = " O troco do cliente é " + troco;
+
+            alert(mensagem);
+
+
+
+
+        }
+
+    </script>
+
+</body>
+</html>

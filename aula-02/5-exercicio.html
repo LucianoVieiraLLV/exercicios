@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Título</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>terreno</h1>
+
+            <p>terreno</p>
+
+            <label for="txt1">Digite a largura do terreno:</label><input type="number" id="txt1">
+            <label for="txt1">Digite o comprimento do terreno:</label><input type="number" id="txt2">
+            <label for="txt1">Digite o valor do m2 do terreno R$:</label><input type="number" id="txt3">
+
+
+
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            //você irá programar aqui!
+
+         var   caixaTexto1 = document.getElementById("txt1").value;
+            txt1 = parseFloat(caixaTexto1);
+
+		var	caixaTexto2 = document.getElementById("txt2").value;
+            txt2 = parseFloat(caixaTexto2);
+
+		var	caixaTexto3 = document.getElementById("txt3").value;
+			txt3 = parseFloat(caixaTexto3);
+
+         var   area = match.round(txt1 * txt2);
+
+            var valor = match.round(area * txt3);
+
+            var mensagem1 = "A aréa do terreno é de " + area + "m2";
+
+            var mensagem2 = " O valor do terreno é de R$ " = valor;
+
+            alert (mensagem1);
+
+            alert (mensagem2);
+
+
+
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+
+.meuTitulo{
+    color: #0a5c85;
+    font-size: 32px;
+    background: grey;
+    text-align: center;
+}
+#link1{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-family: arial;
+    color: lightslategray;
+    background: #333b21;
+    padding: 15px;
+    margin: 25px;
+}
+
+ul li {
+    font-size: 25px;
+}
+
+form #txt2 {
+    background: green;
+}
+
+form input[type="text"] {
+    height: 35px;
+}
+    

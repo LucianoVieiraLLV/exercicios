@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Impares de 1 até x</title>
+    <meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+            <h1>Impares de 1 até x </h1>
+
+            <p>digite </p>
+
+            <label for="txt1">digite o número x :</label><input type="text" id="txtImpares">
+            
+            
+
+            <button onclick="botao_click()">Botão</button>
+
+        </div>
+    </div>
+
+    <script>
+
+        function botao_click() {
+
+            //você irá programar aqui!
+
+            var imparesTexto = document.getElementById("txtImpares").value;
+
+            var impares = parseInt(imparesTexto);
+
+            var mensagem = "Os números imapares é: \rl";
+
+            for (var i = 1; i <= impares; i++) {
+
+                var resto = i % 2;
+
+                if (resto > 0) {
+                    mensagem = mensagem + i + "\rl";
+                }
+            }
+
+            alert(mensagem);
+        }
+
+    </script>
+
+</body>
+</html>
